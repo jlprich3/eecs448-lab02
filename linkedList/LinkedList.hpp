@@ -37,12 +37,15 @@ bool LinkedList<T>::search(T value) const
 {
 	Node<T>* temp = m_front;
 	bool isFound = false;
-
-	/** TODO
-		Fix this method
-	*/
-
-	return(isFound);
+	for(int i=0;i<m_size;i++)
+	{
+		if(temp->getValue()==value)
+		{
+			return(true);
+		}
+		temp = temp->getNext();
+	}
+	return(false);
 }
 
 template <typename T>
